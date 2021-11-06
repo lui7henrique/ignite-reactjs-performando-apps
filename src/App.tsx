@@ -19,6 +19,10 @@ function App() {
     setResults(data);
   };
 
+  const addToWishList = async (id: number) => {
+    console.log(id);
+  };
+
   return (
     <div>
       <h1>Search</h1>
@@ -29,7 +33,7 @@ function App() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </form>
-      <SearchResults results={results} />
+      <SearchResults results={results} onAddToWishList={addToWishList} />
     </div>
   );
 }
